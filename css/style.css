@@ -1,0 +1,412 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino kagu Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+span {
+  background-color: #ded0e7;
+  color: #1b0529;
+  padding: 0.3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+section,
+.section_c,
+.section_m {
+  padding: 3rem 0;
+}
+
+header {
+  border-top: 4px solid #6d238d;
+}
+header .header_inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 100%;
+  max-width: 96rem;
+  margin: 0 auto;
+  padding: 2rem auto;
+}
+@media screen and (max-width: 768px) {
+  header .header_inner {
+    min-width: 100%;
+  }
+}
+header .header_inner h1 img {
+  max-width: 50%;
+  height: auto;
+  margin: 2rem 5rem;
+}
+header .header_inner .header_info {
+  font-size: 3rem;
+  padding: 1.5rem 0;
+}
+header .header_inner .header_info p {
+  display: block;
+  font-size: 90%;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  header .header_inner .header_info p {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .header_inner .header_info p {
+    font-size: 50%;
+    margin-right: 3rem;
+  }
+}
+header .hum {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  cursor: pointer;
+  font-size: 130%;
+  padding: 20px;
+  z-index: 9999;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  header .hum {
+    display: block;
+  }
+}
+header nav {
+  display: block;
+  background-color: #6d238d;
+  width: 100%;
+  z-index: 1000;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  header nav {
+    top: -500px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    max-width: 80%;
+    margin: 0 auto;
+    transition: top 0.7s;
+  }
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  margin: 0;
+  width: 100%;
+}
+header nav ul li {
+  color: #ffffff;
+  padding: 10px 20px;
+  border-left: 1px solid #a740d3;
+}
+header nav ul li:first-child {
+  border-left: none;
+}
+@media screen and (max-width: 768px) {
+  header nav ul li {
+    padding: 5px 10px;
+    margin: 0 auto;
+    display: block;
+    width: 95%;
+    color: #ffffff;
+    border-left: none !important;
+    border-bottom: #ffffff 1px solid;
+  }
+  header nav ul li:last-child {
+    border-bottom: none;
+  }
+}
+header nav ul li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+@media screen and (max-width: 768px) {
+  header nav ul li a {
+    text-align: center;
+    padding: 5px;
+    font-size: 85%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header nav ul {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+}
+header .show {
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  transition-duration: 0.7s;
+}
+
+main {
+  max-width: 100%;
+}
+main img {
+  width: 100vw;
+}
+
+.section_c {
+  background-color: #d9d6e1;
+}
+.section_c button {
+  display: block;
+  margin: 3rem auto;
+  padding: 1rem 5rem;
+  background-color: #f9f4fc;
+  color: #12125e;
+  border-radius: 4px;
+}
+
+section .rinen {
+  max-width: 650px;
+  margin: 0 auto;
+}
+section .rinen h3 {
+  font-size: 2rem;
+  padding: 3rem auto 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+section .rinen p {
+  margin: 1.5rem auto;
+}
+@media screen and (max-width: 768px) {
+  section .rinen p {
+    max-width: 80%;
+  }
+}
+
+.course {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .course {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.course .c_inner {
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .course .c_inner {
+    max-width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .course .c_inner {
+    max-width: 90%;
+  }
+}
+.course .c_inner img {
+  display: block;
+  max-width: 90%;
+  margin: auto;
+}
+.course .c_inner h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+}
+.course .c_inner p {
+  max-width: 80%;
+  margin: 0.5rem auto;
+}
+
+.section_m {
+  background-image: url(../images/bg_01.jpg);
+  background-size: cover;
+  background-attachment: fixed; /*背景画像はスクロールせず固定*/
+  color: #ffffff;
+}
+.section_m .m-inner {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  white-space: normal;
+}
+@media screen and (max-width: 768px) {
+  .section_m .m-inner {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+.section_m .m-inner img {
+  float: left; /*画像を左寄せ回り込み*/
+  margin: 0 20px 10px 0;
+  width: 180px;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .section_m .m-inner img {
+    max-width: 50%;
+    float: none; /*回り込み解除*/
+    display: block;
+    margin: 10px auto; /*中央寄せ*/
+  }
+}
+.section_m .m-inner p {
+  margin: 1.5rem 0;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .section_m .m-inner p {
+    max-width: 100%;
+  }
+}
+.section_m .m-inner .trainer_name {
+  text-align: right;
+}
+
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+table th, table td {
+  border: 1px solid #000000;
+  padding: 1rem;
+  text-align: left;
+}
+table th {
+  background-color: #cfc5d5;
+}
+table td {
+  background-color: #ffffff;
+}
+
+footer {
+  background: linear-gradient(to bottom, #6d238d 0%, #12125e 100%);
+  color: #ffffff;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  footer ul {
+    flex-wrap: wrap;
+    font-size: 95%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer ul {
+    font-size: 70%;
+  }
+}
+footer ul li {
+  padding: 10px;
+  border-left: 1px solid #6d238d;
+}
+footer ul li:first-child {
+  border-left: none;
+}
+footer ul li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: #ffcc00;
+}
+@media screen and (max-width: 768px) {
+  footer ul li {
+    padding: 0.5rem;
+  }
+}
+footer small {
+  display: block;
+  text-align: center;
+  margin: 1px;
+}
+@media screen and (max-width: 768px) {
+  footer small {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer small {
+    font-size: 60%;
+  }
+}
+
+.go-top {
+  position: fixed;
+  display: block;
+  bottom: 9rem;
+  right: 10%;
+  z-index: 9999;
+  width: 7em;
+  height: 1.5em;
+  background-color: #6d238d;
+  padding: 0.3em;
+  border-radius: 4px;
+}
+@media screen and (max-width: 768px) {
+  .go-top {
+    height: 1.4em;
+    font-size: 75%;
+    bottom: 5rem;
+  }
+}
+.go-top a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.go-top a:hover {
+  color: #ffcc00;
+}/*# sourceMappingURL=style.css.map */
